@@ -1,0 +1,33 @@
+.mainhome {
+  width: 100vw;
+  height: 100vh;
+  background-color: bisque;
+  display: flex;
+  justify-content: center;
+  padding-top: 160px;
+  
+}
+.subhome {
+  width: 95vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+
+ 
+}
+
+.notefi{
+    font-weight: 500;
+    font-size: 20px;
+    margin-left: 30px;
+    
+}
+.menu-drop{
+  background-color: rgb(74, 76, 75) !important;
+  border-color: black !important;
+}
+.menu-drop:hover{
+  background-color: white !important;
+  border-color: white !important;
+  color: black !important;
+}

@@ -1,0 +1,45 @@
+.maincondainer{
+    width: 100vw;
+    height: 100vh;
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 180px;
+}
+
+.loginbox{
+
+    width: 500px;
+    height: 550px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.sub-log{
+    width: 350px; 
+    height: 375px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.input-box{
+    width: 350px;
+    height:30px;
+   
+}
+.log{
+    font-weight: 700;
+    /* margin-bottom: 30px; */
+}
+
+@media (max-width:844px){
+    .input-box{
+        width: 200px;
+        height: 40px;
+    }
+}

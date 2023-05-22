@@ -1,0 +1,18 @@
+.add-main-box{
+    width: 100vw;
+    height: 100vh;
+    background-color:bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    
+    
+}
+.add-sub-box{
+    width: 200px;
+    height: 400px;
+    background-color: aquamarine;
+    display:flex ;
+    flex-direction: column;
+}
