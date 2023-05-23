@@ -30,6 +30,7 @@ const [prodname, setprodname] = useState("");
   const [url , seturl] = useState("");
   const productcolloctionref = collection(db, "cartitem");
   const userid = localStorage.getItem("userid")
+  console.log("useris",userid);
  
 const addtocart = async(prod) =>{
   
@@ -42,7 +43,7 @@ const addtocart = async(prod) =>{
       name: prodname,
       rate: prodrate,
       url: url,
-      id:userid
+      clintid:userid
       
     },
     alert("added to cart")

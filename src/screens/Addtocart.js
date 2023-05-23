@@ -21,6 +21,7 @@ const Addtocart = (props) => {
       id: doc.id,
     }));
     setproductlist(filterdData);
+    
     filteredData()
   };
   useEffect(()=>{
@@ -29,18 +30,23 @@ const Addtocart = (props) => {
     
   },[])
   
-  const id = localStorage.getItem("userid")
-  console.log("id",id);
+  const Userid = localStorage.getItem("userid")
+  
+  console.log("id",Userid);
   const [fireitem , setfireitem] = useState([]);
+  const [filterdprod, setfilterdprod] = useState([])
+  
   const filteredData = () =>{
-    setfireitem(productlist)
-    const fiter = fireitem.filter(item => item.userid===id)
+    setfireitem(productlist);
+    const fiter = fireitem.filter(item => item.clintid === Userid)
     console.log("filter",fiter);
+    setfilterdprod(fiter);
+    console.log("caar",filterdprod);
   }
  
   
-  console.log("prodlist",productlist);
-  console.log("fire",fireitem);
+  console.log("prodlist",productlist);  
+  console.log("fireitem ",fireitem);
  
     
     return(
@@ -48,6 +54,13 @@ const Addtocart = (props) => {
         
         <div>
             <button onClick={getproductlist}></button>
+            {
+                filterdprod.map((prod) => {
+                    <div>
+                        
+                    </div>
+                })
+            }
             
         </div>
         
