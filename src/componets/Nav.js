@@ -16,10 +16,10 @@ const Nav = () =>{
 
             </div>
             <div className='subdiv'>
-            <Button variant="secondary" className='hbotton' href='/'>HOME
+            <Button variant="secondary" className='hbotton' href='/'>USER
             
             </Button>{' '}
-            <Button variant="secondary" className='h-botton' href='/login'>LOGIN
+            <Button variant="secondary" className='h-botton' href='/login'>ADMIN
             
             </Button>{' '}
 

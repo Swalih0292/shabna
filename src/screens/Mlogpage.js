@@ -1,4 +1,4 @@
-import "./Loginpage.css";
+import "./Mlogpage.css";
 import Button from "react-bootstrap/Button";
 
 import { signInWithEmailAndPassword } from "firebase/auth";
@@ -7,12 +7,12 @@ import { useState } from "react";
 import { auth } from "../firebase/config";
 
 import "react-toastify/dist/ReactToastify.css";
-import { Alert } from "bootstrap";
 
-const Login = () => {
+    
+const Mlogin = () => {
   const navigate = useNavigate();
   const navigateToAhome = () => {
-    navigate("/adminhome");
+    navigate("homepage");
   };
 
   const [email, setEmail] = useState("");
@@ -20,7 +20,14 @@ const Login = () => {
 
   const login = async () => {
     try {
-      await signInWithEmailAndPassword(auth, email, password);
+     const response = await signInWithEmailAndPassword(auth, email, password);
+     console.log("respo",response);
+     const usertoken = await response.user.getIdToken;
+     console.log("halo",usertoken);
+     localStorage.setItem("usertoken",usertoken)
+
+     const userid = response.user.uid;
+     localStorage.setItem("userid",userid)
 
       navigateToAhome();
       alert("Login successfully");
@@ -35,7 +42,7 @@ const Login = () => {
     <div className="maincondainer">
       <div className="loginbox rounded-4 shadow p-3 mb-5 bg-body-tertiary rounded">
        <div className="sub-log">
-       <h2 className="log">Login In</h2>
+       <h2 className="log"> User Login In</h2>
 
 <span>Email address</span>
 <input
@@ -61,6 +68,7 @@ const Login = () => {
 <Button variant="primary" type="submit" onClick={login}>
   submit
 </Button>
+<a href="regpage">Are you new user ?</a>
        </div>
 
 
@@ -68,4 +76,4 @@ const Login = () => {
     </div>
   );
 };
-export default Login;
+export default Mlogin;

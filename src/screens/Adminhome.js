@@ -15,6 +15,7 @@ const Adminhome = () => {
     await signOut(auth);
     alert("Logout Successfully");
     navigateTohome();
+    localStorage.removeItem("usertoken")
   };
 
   console.log(auth);
