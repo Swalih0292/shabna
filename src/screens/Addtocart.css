@@ -1,6 +1,6 @@
 .add-main-box{
     width: 100vw;
-    height: 100vh;
+    height: fit-content;
     background-color:bisque;
     display: flex;
     justify-content: center;
@@ -10,9 +10,50 @@
     
 }
 .add-sub-box{
-    width: 200px;
-    height: 400px;
-    background-color: aquamarine;
-    display:flex ;
+    width: 80vw;
+    height: 80vh;
+    background-color: rgb(244, 31, 31);
+    display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
 }
+.prod-div{
+    width: 80vw;
+    height: 350px;
+    background-color: rgb(242, 253, 253);
+    display: flex;
+    flex-direction:row;
+    border: 5px solid black;
+    align-items: center;
+}
+.add-img{
+    width: 300px;
+    height: 300px;
+    
+    
+}
+.add-detail{
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    font-size: x-large;
+    padding-left: 50px;
+}
+@media (max-width:844px){
+    .add-sub-box{
+        width: 150px;
+        height: 80vh;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+    }
+    .add-main-box{
+        padding: 0px;
+        
+    }
+  }
